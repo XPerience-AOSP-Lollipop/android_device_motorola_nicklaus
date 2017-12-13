@@ -19,6 +19,10 @@ DEVICE_PATH := device/motorola/woods
 # call the proprietary setup
 $(call inherit-product, vendor/motorola/woods/woods-vendor.mk)
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    fingerprintd
+
 # RAMDISK
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/init.project.rc:root/init.project.rc \
