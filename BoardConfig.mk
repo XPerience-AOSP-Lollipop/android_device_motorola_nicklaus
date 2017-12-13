@@ -17,23 +17,23 @@
 # inherit from common mt6737-common
 -include device/motorola/mt6737-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/motorola/woods
+DEVICE_PATH := device/motorola/nicklaus
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := Moto_E4,Moto E4,moto_e4,e4,woods,woods_f
+TARGET_OTA_ASSERT_DEVICE := Moto E4 Plus,"nicklaus",nicklaus
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/motorola/woods
-TARGET_KERNEL_CONFIG := woods_defconfig
+TARGET_KERNEL_CONFIG := nicklaus_defconfig
 
 # bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 # Graphics
-BOARD_EGL_CFG := /vendor/motorola/woods/proprietary/vendor/lib/egl/egl.cfg
+BOARD_EGL_CFG := /vendor/motorola/nicklaus/proprietary/vendor/lib/egl/egl.cfg
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # inherit from the proprietary version
--include vendor/motorola/woods/BoardConfigVendor.mk
+-include vendor/motorola/nicklaus/BoardConfigVendor.mk

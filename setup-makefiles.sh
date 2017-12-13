@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEVICE=woods
+DEVICE=nicklaus
 VENDOR=motorola
 
 OUTDIR=vendor/$VENDOR/$DEVICE

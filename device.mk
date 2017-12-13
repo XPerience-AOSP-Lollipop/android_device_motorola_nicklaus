@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/motorola/woods
+DEVICE_PATH := device/motorola/nicklaus
 
 # call the proprietary setup
-$(call inherit-product, vendor/motorola/woods/woods-vendor.mk)
+$(call inherit-product, vendor/motorola/nicklaus/nicklaus-vendor.mk)
 
 # Fingerprint
 PRODUCT_PACKAGES += \

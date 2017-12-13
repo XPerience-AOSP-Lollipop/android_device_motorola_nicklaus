@@ -14,6 +14,10 @@ on post-fs-data
     chown system system /persist
     chmod 0771 /persist
 
+    mkdir /data/nfc 0770 nfc nfc
+    chown nfc nfc /data/nfc
+    chmod 0770 /data/nfc
+
     # jijin.wang restorecon /persist to set SEPolicy label.
     restorecon /persist
     # lenovo sw zhangpei5 20170223 save log in /persist/simlock
@@ -24,11 +28,14 @@ on post-fs-data
     #restore necessary files into data partition
     mkdir /data/thh 0770 root root
     mkdir /data/thh/tee_00 0770 root root
-    copy /cache/thh/tee_00/thh_mt6737_woods.certs /data/thh/tee_00/thh_mt6737_woods.certs
-    copy /cache/thh/tee_00/thh_mt6737_woods.cfg /data/thh/tee_00/thh_mt6737_woods.cfg
+    copy /cache/thh/tee_00/thh_mt6737_motoe4plus.certs /data/thh/tee_00/thh_mt6737_motoe4plus.certs
+    copy /cache/thh/tee_00/thh_mt6737_motoe4plus.cfg /data/thh/tee_00/thh_mt6737_motoe4plus.cfg
     mkdir /data/local 0751 root root
     mkdir /data/local/tmp 0771 shell shell
-    copy /cache/local/tmp/thh_mt6737_woods.cfg /data/local/tmp/thh_mt6737_woods.cfg
+    copy /cache/local/tmp/thh_mt6737_motoe4plus.cfg /data/local/tmp/thh_mt6737_motoe4plus.cfg
+#    mkdir /data/app 0770 root root
+#    mkdir /data/app/FactoryRest 0770 root root
+#    copy /cache/app/FactoryResti/FactoryRest.apk /data/app/FactoryRest/FactoryRest.apk
 
 
 #add by yangchao
@@ -100,7 +107,7 @@ on post-fs-data
 
     chmod 0664 /proc/mtk_battery_cmd/current_cmd
     chmod system system /proc/mtk_battery_cmd/current_cmd
-
+   
 #Camera
     chmod 0660 /dev/MAINAF
     chown system camera /dev/MAINAF
@@ -123,22 +130,7 @@ on post-fs-data
     
 	chmod 0660 /dev/BU64745GWZAF
     chown system camera /dev/BU64745GWZAF
-#wangkangmin@wind-mobi.com 20161206 add for camera af and BB otp begin
-    chmod 0660 /dev/DW9718AF
-    chown system camera /dev/DW9718AF
 
-    chmod 0660 /dev/DW9718QTAF
-    chown system camera /dev/DW9718QTAF
-
-    chmod 0660 /dev/CAM_CAL_DRV1
-    chown system camera /dev/CAM_CAL_DRV1
-
-    chmod 0660 /dev/CAM_CAL_DRV2
-    chown system camera /dev/CAM_CAL_DRV2
-
-    chmod 0660 /dev/CAM_CAL_DRV3
-    chown system camera /dev/CAM_CAL_DRV3
-#wangkangmin@wind-mobi.com 20161206 add for camera af and BB otp end
 #SMB
     chown system system /proc/smb/ScreenComm
     chmod 0660 /proc/smb/ScreenComm
@@ -254,4 +246,5 @@ on property:persist.sys.runin=enable
 
 on property:persist.sys.runin=disable
     write /sys/class/power_supply/battery/device/BatteryTestStatus 0
+
 

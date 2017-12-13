@@ -16,7 +16,7 @@
 
 #!/bin/bash
 
-export DEVICE=woods
+export DEVICE=nicklaus
 export VENDOR=motorola
 
 if [ $# -eq 0 ]; then
