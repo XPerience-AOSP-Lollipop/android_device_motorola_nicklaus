@@ -23,7 +23,7 @@ DEVICE_PATH := device/motorola/nicklaus
 TARGET_OTA_ASSERT_DEVICE := Moto E4 Plus,"nicklaus",nicklaus
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/motorola/woods
+TARGET_KERNEL_SOURCE := kernel/motorola/mt6737
 TARGET_KERNEL_CONFIG := nicklaus_defconfig
 
 # bluetooth
