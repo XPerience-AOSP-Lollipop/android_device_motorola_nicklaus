@@ -1,0 +1,3 @@
+#allow teei_daemon save fingerprint data
+allow teei_daemon fingerprintd_data_file:dir { search write add_name };
+allow teei_daemon fingerprintd_data_file:file { create read write open };
