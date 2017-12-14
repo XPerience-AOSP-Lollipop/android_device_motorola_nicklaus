@@ -20,7 +20,7 @@
 DEVICE_PATH := device/motorola/nicklaus
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := Moto E4 Plus,"nicklaus",nicklaus
+TARGET_OTA_ASSERT_DEVICE := Moto E4 Plus,"nicklaus",nicklaus,e4plus
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/motorola/mt6737
