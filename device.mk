@@ -16,6 +16,9 @@
 
 DEVICE_PATH := device/motorola/nicklaus
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
 # call the proprietary setup
 $(call inherit-product, vendor/motorola/nicklaus/nicklaus-vendor.mk)
 
