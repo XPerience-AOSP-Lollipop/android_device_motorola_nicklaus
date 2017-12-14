@@ -19,17 +19,12 @@ DEVICE_PATH := device/motorola/nicklaus
 # call the proprietary setup
 $(call inherit-product, vendor/motorola/nicklaus/nicklaus-vendor.mk)
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    fingerprintd
-
 # RAMDISK
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/init.project.rc:root/init.project.rc \
     $(DEVICE_PATH)/rootdir/init.modem.rc:root/init.modem.rc \
     $(DEVICE_PATH)/rootdir/init.mt6735.rc:root/init.mt6735.rc \
-    $(DEVICE_PATH)/rootdir/init.mt6735.power.rc:root/init.mt6735.power.rc \
-    $(DEVICE_PATH)/rootdir/fstab.mt6735:root/fstab.mt6735
+    $(DEVICE_PATH)/rootdir/init.mt6735.power.rc:root/init.mt6735.power.rc
 
 # Inherit from mt6737-common
 $(call inherit-product, device/motorola/mt6737-common/mt6737.mk)
